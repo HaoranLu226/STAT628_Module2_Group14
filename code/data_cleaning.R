@@ -47,7 +47,6 @@ bodyfat[86,14] #ankle=33.7
 # Remove the outliers.
 cleaned = bodyfat[-out,]
 
-
 ############################################################################################################
-### 3.Export the non-outliers to a .csv file. [Xinran Miao]
+### 3.Export the non-outliers to a .csv file.
 write.csv(cleaned,"cleaned_bodyfat.csv",row.names = FALSE)
