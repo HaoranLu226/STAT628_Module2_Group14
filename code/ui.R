@@ -17,7 +17,7 @@ library(png)
 cleaned = read.csv("../data/cleaned_bodyfat.csv")
 ui = shinyUI(fluidPage(
     
-    titlePanel("Get Your BodyFat!"),
+    titlePanel("Get Males BodyFat!"),
     
     hr(),
     
