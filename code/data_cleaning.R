@@ -1,11 +1,12 @@
-# Xinran Miao create the file,
+# Xinran Miao created the file,
 # Junxia Zhao revised it.
-
+# The responsibility can be found in the text when one sees
+# [Junxia Zhao] or [Xinran Miao]. 
 ############################################################################################################
 ### 1.Read the data set ####
 bodyfat = read.csv("BodyFat.csv")
-
-# Relevant aspects about data [Junxia Zhao]
+# [Junxia Zhao] =================================
+# Relevant aspects about data 
 str(bodyfat)  
 summary(bodyfat)
 mean(bodyfat$BODYFAT) 
@@ -13,8 +14,8 @@ sd(bodyfat$BODYFAT)
 
 ############################################################################################################
 ### 2 Detect outliers.  ####
-
-#===== (1) Find the outliers. [Xinran Miao]
+#  [Xinran Miao]==================================
+#===== (1) Find the outliers.
 detect_outlier = function(x, multiplier = 1.5){
   # Compute the difference of 75% and 25% quantiles
   q = quantile(x,probs = 0.75) - quantile(x,probs = 0.25)
@@ -34,8 +35,8 @@ out = c(out, detect_outlier(bodyfat$BODYFAT,multiplier = 2))
 # Choose the unduplicated outliers.
 out = out[duplicated(out) == FALSE]
 
-
-#===== (2) Look into suspicious data. [Junxia Zhao]
+# [Junxia Zhao] ==================================
+#===== (2) Look into suspicious data. 
 bodyfat[42,6]  #hight=29.5
 bodyfat[39,5]  #weight=363.15
 bodyfat[41,7]  #adiposity=39.1
