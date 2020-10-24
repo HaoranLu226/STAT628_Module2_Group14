@@ -96,22 +96,18 @@ server = shinyServer(function(input, output) {
 # Print a figure for reference.
     output$myImage <- renderImage({ 
         
-        if (res() <= 2){
-            return(list(src = "bodyfat.jpg", width = 320, height = 320, alt = "shape"))}
-        else if (res() < 18.5){
-            return(list(src = "bodyfat_0.jpg", width = 225, height = 325, alt = "shape"))}
-        else if (res() < 24.9){
-            return(list(src = "bodyfat_1.jpg", width = 225, height = 325, alt = "shape"))}
-        else if (res() < 29.9){
-            return(list(src = "bodyfat_2.jpg", width = 225, height = 325, alt = "shape"))}
-        else if (res() < 34.9){
-            return(list(src = "bodyfat_3.jpg", width = 225, height = 325, alt = "shape"))}
-        else if (res() < 39.9){
-            return(list(src = "bodyfat_4.jpg", width = 225, height = 325, alt = "shape"))}
+        if (res() <= 10){
+            return(list(src = "bodyfat8.JPG",  width = 150, height = 350, alt = "shape"))}
+        else if (res() < 13){
+            return(list(src = "bodyfat10_14.JPG",  width = 150, height = 350, alt = "shape"))}
+        else if (res() < 17.5){
+            return(list(src = "bodyfat15_18.JPG", width = 150, height = 350, alt = "shape"))}
+        else if (res() < 27.5){
+            return(list(src = "bodyfat20_25.JPG",  width = 150, height = 350, alt = "shape"))}
         else {
-            return(list(src = "bodyfat_5.jpg", width = 225, height = 325, alt = "shape"))}
+            return(list(src = "bodyfat30.JPG",  width = 150, height = 350, alt = "shape"))}
         
-    }, deleteFile = FALSE) 
+    }, deleteFile = FALSE)
 # [Xinran Miao] ==================================================
 # Define urls as the links.
     url1 <- a('--',"14 Ways to Burn Fat Fast!", href="https://www.healthline.com/nutrition/best-ways-to-burn-fat")
@@ -132,7 +128,7 @@ server = shinyServer(function(input, output) {
     output$github = renderUI({tagList("Check our github repository for codes and other details!",url4)})
     
     
-    url5 = a("Click Here.", href= ‘https://www.hindustantimes.com/brunch/core-training-and-the-six-pack-mania/story-Hl2ulzmS2ajb2J0mzYMMYI.html')
+    url5 = a("Click Here.", href= 'https://www.hindustantimes.com/brunch/core-training-and-the-six-pack-mania/story-Hl2ulzmS2ajb2J0mzYMMYI.html')
     output$picture= renderUI({tagList("Pictures of body shape are from following:",url5)}) 
     
 })
