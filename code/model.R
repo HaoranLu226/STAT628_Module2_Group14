@@ -8,8 +8,8 @@ library(glmnet)
 library(lars)
 ############################################################################################################
 ###1.Read the original and cleaned data sets. ####
-bodyfat = read.csv("BodyFat.csv")
-cleaned = read.csv("cleaned_bodyfat.csv")
+bodyfat = read.csv("../data/BodyFat.csv")
+cleaned = read.csv("../data/cleaned_bodyfat.csv")
 
 ############################################################################################################
 ###2.Model selections ####
