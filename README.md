@@ -1,2 +1,0 @@
-# STAT628_Module2_Group14
-STAT628_Module2_Group14
