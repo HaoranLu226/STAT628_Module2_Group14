@@ -1,7 +1,4 @@
----
-title: "A Simple, Accurate and Robust Way for Body Fat Prediction"
-output: html_document
----
+# A Simple, Accurate and Robust Way for Body Fat Prediction
 
 
 This repository provides a simple, accurate and robust way to predict body fat percentage for men. The descriptions of four directories are as following.
