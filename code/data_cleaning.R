@@ -1,6 +1,6 @@
 # Xinran Miao create the file,
 # Junxia Zhao revised it.
-# Xinran Miao is responsible.
+
 ############################################################################################################
 ### 1.Read the data set ####
 bodyfat = read.csv("BodyFat.csv")
