@@ -1,9 +1,11 @@
-
+# Xinran Miao create the file,
+# Junxia Zhao revised it.
+# Xinran Miao is responsible.
 ############################################################################################################
 ### 1.Read the data set ####
 bodyfat = read.csv("BodyFat.csv")
 
-# Relevant aspects about data 
+# Relevant aspects about data [Junxia Zhao]
 str(bodyfat)  
 summary(bodyfat)
 mean(bodyfat$BODYFAT) 
@@ -12,7 +14,7 @@ sd(bodyfat$BODYFAT)
 ############################################################################################################
 ### 2 Detect outliers.  ####
 
-#===== (1) Find the outliers.
+#===== (1) Find the outliers. [Xinran Miao]
 detect_outlier = function(x, multiplier = 1.5){
   # Compute the difference of 75% and 25% quantiles
   q = quantile(x,probs = 0.75) - quantile(x,probs = 0.25)
@@ -33,7 +35,7 @@ out = c(out, detect_outlier(bodyfat$BODYFAT,multiplier = 2))
 out = out[duplicated(out) == FALSE]
 
 
-#===== (2) Look into suspicious data.
+#===== (2) Look into suspicious data. [Junxia Zhao]
 bodyfat[42,6]  #hight=29.5
 bodyfat[39,5]  #weight=363.15
 bodyfat[41,7]  #adiposity=39.1
@@ -46,5 +48,5 @@ cleaned = bodyfat[-out,]
 
 
 ############################################################################################################
-### 3.Export the non-outliers to a .csv file.
+### 3.Export the non-outliers to a .csv file. [Xinran Miao]
 write.csv(cleaned,"cleaned_bodyfat.csv",row.names = FALSE)
