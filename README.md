@@ -9,7 +9,7 @@ This repository provides a simple, accurate and robust way to predict body fat p
 
 * `figure`: Contains figures for model diagnostics, including homoscedasticity (`homoscedasticity.jpeg`), linearity (`linearity.jpeg`) and normality (`normality.jpeg`), as well as two figures to check outliers (`CoodDistance.jpeg` and `LOOCVres.jpeg`).
 
-To reproduce our model, one can use `data_cleaning.R` in the `code` directory to process `BodyFat.csv` in the `data` directory. It's expected to write a file same as `cleaned_bodyfat.csv` in the `data` directory. After that, one can run the `model.R` for the 10 models we've constructed and compare there pros and cons. The recommended one is selected in the end, which is our proposed one for building the app. 
+To reproduce our model, one can use `data_cleaning.R` in the `code` directory to process `BodyFat.csv` in the `data` directory. It's expected to write a file same as `cleaned_bodyfat.csv` in the `data` directory. After that, one can run the `model.R` for the 10 models we've constructed and compare there pros and cons (the first two models are based on the original data `data/BodyFat.csv`). The recommended model is selected in the end, which is our proposed one for building the app. 
 
 To reproduce the figures and app, one can run `figure.R`, `ui.R` and `server.R` in the `code` directory. 
 
