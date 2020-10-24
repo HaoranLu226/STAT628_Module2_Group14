@@ -1,3 +1,8 @@
+# Created by Haoran Lu.
+# Revised by Junxia Zhao.
+# The responsibility can be found in the text when one sees
+# [Junxia Zhao] or [Haoran Lu].
+###########################################################################################################
 rm(list=ls())
 library(dplyr)
 library(MASS)
