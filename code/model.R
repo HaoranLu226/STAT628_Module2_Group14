@@ -1,7 +1,8 @@
 # Created by Haoran Lu.
 # Revised by Junxia Zhao.
+# Revised by Xinran Miao.
 # The responsibility can be found in the text when one sees
-# [Junxia Zhao] or [Haoran Lu].
+# [Junxia Zhao] or [Haoran Lu] or [Xinran Miao].
 ###########################################################################################################
 rm(list=ls())
 library(dplyr)
