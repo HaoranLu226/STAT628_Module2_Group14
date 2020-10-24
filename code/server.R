@@ -132,7 +132,7 @@ server = shinyServer(function(input, output) {
     output$github = renderUI({tagList("Check our github repository for codes and other details!",url4)})
     
     
-    url5 = a("Click Here.", href= 'https://www.journey-fit.com/fitness_articles/what-is-bmi/')
+    url5 = a("Click Here.", href= ‘https://www.hindustantimes.com/brunch/core-training-and-the-six-pack-mania/story-Hl2ulzmS2ajb2J0mzYMMYI.html')
     output$picture= renderUI({tagList("Pictures of body shape are from following:",url5)}) 
     
 })
