@@ -1,5 +1,7 @@
-# Created by Junxia Zhao,
-# Revised by Xinran Miao (responsible)
+# Created by Junxia Zhao.
+# Revised by Xinran Miao.
+# The responsibility can be found in the text when one sees
+# [Junxia Zhao] or [Xinran Miao]. 
 rm(list=ls())
 ############################################################################################################
 ###1.Read data set ###
@@ -10,12 +12,14 @@ cleaned = read.csv("../data/cleaned_bodyfat.csv")
 ####2. Model diagnostics ####
 
 #===== (1) Check for constant variance
+# [Junxia Zhao] ===========================================
 # Residuals vs fitter values
 plot(y=mod5$residuals,x=mod5$fitted.values,xlab = "Fitted Values", ylab = "Residuals",
      main = 'Residuals vs Fitted',cex.lab=1.3)
 
 #===== (2) Check for linearity
 # Bodyfat vs fitted values.
+# [Xinran Miao]============================================
 plot(y=cleaned$BODYFAT,x=mod5$fitted.values, main = 'Body Fat vs Fitted Values',
      ylab = 'Body fat (%)', xlab = 'Fitted values (%)',cex.lab=1.3)
 plot(cleaned$BODYFAT,cleaned$WEIGHT, main = 'Body Fat vs Weight',
@@ -26,6 +30,7 @@ plot(cleaned$BODYFAT,cleaned$WRIST, main = 'Body Fat vs Wrist',
      ylab = 'Body fat (%)', xlab = 'Wrist (cm)',cex.lab=1.3)
 
 #===== (3) Check for normality
+# [Junxia Zhao]=============================================
 # qqplot
 qqnorm(mod5$residuals,main='QQ Norm Plot',cex.lab=1.3)
 qqline(mod5$residuals,col="red")
