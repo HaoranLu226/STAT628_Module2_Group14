@@ -98,13 +98,13 @@ server = shinyServer(function(input, output) {
         
        if (res() <= 0){ 
             return(list(src = "bodyfat_error.jpg", width = 200, height = 300, alt = "shape"))}
-        else if (res() <=10){
+        else if (res() <=9){
             return(list(src = "bodyfat8.jpg", width = 88, height = 300, alt = "shape"))}
-        else if (res() <= 14){
+        else if (res() <=14.5){
             return(list(src = "bodyfat10_14.jpg", width = 88, height = 300, alt = "shape"))}
-        else if (res() <= 19){
+        else if (res() <= 19.5){
             return(list(src = "bodyfat15_18.jpg", width = 88, height = 300, alt = "shape"))}
-        else if (res() <=29){
+        else if (res() <=27.5){
             return(list(src = "bodyfat20_25.jpg", width = 88, height = 300, alt = "shape"))}
         else if (res() <= 50){ 
             return(list(src = "bodyfat30.jpg", width = 88, height = 300, alt = "shape"))}
