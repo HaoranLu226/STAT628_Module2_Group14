@@ -43,7 +43,7 @@ server = shinyServer(function(input, output) {
     
     # Calculate the quantile of user's body fat percentage.
     Bodyfat_level = function(x){
-        a=paste0('You body fat is lower than ',
+        a=paste0('Your body fat is ',res(),'%. It is lower than ',
                  round(100*sum(cleaned$BODYFAT>res())/nrow(cleaned+1),0),
                  '% of others! ',sep='')
         return(a)
