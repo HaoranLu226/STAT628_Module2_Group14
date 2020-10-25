@@ -53,7 +53,7 @@ ui = shinyUI(fluidPage(
                # Print out texts.
                p("Please contact us for any problem! "),
                p("We can be reached at: "),
-               p("zhaobiubiu000@gmail.com"),
+               p("jzhao347@wisc.edu"),
                p('xmiao27@wisc.edu'),
                p("hlu226@wisc.edu"),
                hr(),
