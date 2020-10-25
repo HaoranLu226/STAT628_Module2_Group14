@@ -96,16 +96,20 @@ server = shinyServer(function(input, output) {
 # Print a figure for reference.
     output$myImage <- renderImage({ 
         
-        if (res() <= 10){
-            return(list(src = "bodyfat8.JPG",  width = 150, height = 350, alt = "shape"))}
-        else if (res() < 13){
-            return(list(src = "bodyfat10_14.JPG",  width = 150, height = 350, alt = "shape"))}
-        else if (res() < 17.5){
-            return(list(src = "bodyfat15_18.JPG", width = 150, height = 350, alt = "shape"))}
-        else if (res() < 27.5){
-            return(list(src = "bodyfat20_25.JPG",  width = 150, height = 350, alt = "shape"))}
-        else {
-            return(list(src = "bodyfat30.JPG",  width = 150, height = 350, alt = "shape"))}
+       if (res() <= 0){ 
+            return(list(src = "bodyfat_error.jpg", width = 200, height = 300, alt = "shape"))}
+        else if (res() <=10){
+            return(list(src = "bodyfat8.jpg", width = 88, height = 300, alt = "shape"))}
+        else if (res() <= 14){
+            return(list(src = "bodyfat10_14.jpg", width = 88, height = 300, alt = "shape"))}
+        else if (res() <= 19){
+            return(list(src = "bodyfat15_18.jpg", width = 88, height = 300, alt = "shape"))}
+        else if (res() <=29){
+            return(list(src = "bodyfat20_25.jpg", width = 88, height = 300, alt = "shape"))}
+        else if (res() <= 50){ 
+            return(list(src = "bodyfat30.jpg", width = 88, height = 300, alt = "shape"))}
+        else if (res() > 50){ 
+            return(list(src = "bodyfat_error.jpg", width = 200, height = 300, alt = "shape"))}
         
     }, deleteFile = FALSE)
 # [Xinran Miao] ==================================================
