@@ -34,9 +34,9 @@ ui = shinyUI(fluidPage(
         ),
         # A column to input units.
         column(3,
-               selectInput("weight_unit", "Weight Unit:", choices = c(pound="lbs", kilogram="kg")),
-               selectInput("abdo_unit", "Abdomen Unit:", choices = c(centimeter = "cm", inches = 'inches')),
-               selectInput("wrist_unit", "Wrist Unit:", choices = c(centimeter = "cm", inches = 'inches')),
+               selectInput("weight_unit", "Weight Unit:", choices = c(lb = "pounds", kg = "kilograms")),
+               selectInput("abdo_unit", "Abdomen Unit:", choices = c(cm = "centimeter", inches = "inches")),
+               selectInput("wrist_unit", "Wrist Unit:", choices = c(cm = "centimeter", inches = "inches")),
                p("Recommended Reading:"),
                uiOutput("reduce"),
                p(),
