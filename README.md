@@ -13,6 +13,6 @@ To reproduce our model, one can use `data_cleaning.R` in the `code` directory to
 
 To reproduce the figures and app, one can run `figure.R`, `ui.R` and `server.R` in the `code` directory. Please note that one should copy the images in `figure/images_app` to th same directory of R files at first.
 
-Our [web-based app](https://jzhao55.shinyapps.io/addt/) implements our proposed model. One can first type down the weight, abdomen and wrist circumference measurements with corresponding units, and then click th `Calculate!` button to estimate th body fat percentage. The image on the right shows one possible body shape. And a histogram below shows the body fat (%) among men and the highlights the user's body fat percentage. 
+Our [web-based app](https://jzhao55.shinyapps.io/addt/) implements our proposed model. One can first type down the weight, abdomen and wrist circumference measurements with corresponding units, and then click the `Calculate!` button to estimate th body fat percentage. The image on the right shows one possible body shape. And a histogram below shows the body fat (%) among men and the highlights the user's body fat percentage. 
 
 
